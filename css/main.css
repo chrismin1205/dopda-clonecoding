@@ -110,3 +110,29 @@ section.about .inner .line li.c{animation-name: opacity-ani; animation-duration:
 section.about .inner ul li{animation-name: slide-up2; animation-duration: 2.4s;}
 section.about .inner ul li:nth-child(2){animation-name: slide-up2; animation-duration: 2.8s;}
 section.about .inner ul li:nth-child(3){animation-name: slide-up2; animation-duration: 3.2s;}
+
+/* section.premium */
+/* box-sizing 은 width영역 안으로 padding이 들어가도록 */
+section.premium{width: 95%; margin: 40px auto; padding: 100px 0; height: 1020px; box-sizing: border-box; background: url(../img/con2_bg.jpg) no-repeat center/cover; position: relative;}
+/* img에 width 값 주기위해 block 으로 바꿔줌 */
+/* overflow:hidden 안하면 애니메이션 안보임(0%~30% 까지는 보이지 않도록) */
+section.premium .txtImg{position: absolute; left: 0; top: 20%; display: block; width:100%; animation-name: width-ani; animation-duration: 1.5s; overflow: hidden;}
+@keyframes width-ani{
+    0%{width: 0%;}
+    30%{width: 0%;}
+}
+
+section.premium .title{position: absolute; left: 8%; top: 35%;}
+section.premium .title h2{font-size: 30px; margin-bottom: 20px;}
+section.premium .title p{font-size: 19px; line-height: 1.6; margin-bottom: 30px;}
+section.premium .title a{font-size: 24px; display: inline-block; position: relative;}
+section.premium .title a:before{content: ""; width: 80px; height: 15px; background: rgba(0, 0, 0, 0.08); position: absolute; bottom: 0; transition: all 0.3s;}
+section.premium .title a:hover:before,
+section.premium .title a:focus:before{width: 0%;}
+section.premium .banner li{position: absolute; box-shadow: 5px 6px 15px rgba(3, 3, 3, 0.4); width: 15%;}
+section.premium .banner li img{width: 100%;}
+section.premium .banner li:nth-child(1){left: 45%; top: 15%; animation-name: slide-up; animation-duration: 1.2s;}
+section.premium .banner li:nth-child(2){left: 37%; top: 50%; animation-name: slide-up; animation-duration: 1.6s;}
+section.premium .banner li:nth-child(3){left: 55%; top: 62%; animation-name: slide-up; animation-duration: 2s;}
+/* max-width 값은 해상도가 높은 기기에서도 이미지가 더 커지지 못하도록 하기 위해 최대폭 지정 */
+section.premium .banner li:nth-child(4){right: 2%; width: 32%; max-width: 580px; animation-name: slide-up; animation-duration: 2.4s;}
